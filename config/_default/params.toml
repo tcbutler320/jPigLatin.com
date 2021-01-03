@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "piglatin.app"
+title = "JPigLatin"
 titleSeparator = "-"
-titleAddition = "A simple translation app"
-description = "Piglatin.app is a simple application that translates plain text to pig-latin"
+titleAddition = "A Simple JavaScript Translation and Speech Synthesis Application"
+description = "JPigLatin is a Simple JavaScript Translation and Speech Synthesis Application"
 
 ## Open Graph + Twitter Cards
 images = ["doks.png"]
