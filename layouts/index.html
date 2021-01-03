@@ -6,8 +6,23 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.Lead | safeHTML }}</p>
-
       <button class="btn btn-primary btn-lg px-4 mb-2" onclick="myFunction()">Translate!</button>
+      <button class="btn btn-primary btn-lg px-4 mb-2" onclick="talkToMe()">Speak</button>
+
+      <script>
+      function talkToMe() {
+        if ('speechSynthesis' in window) {
+        // Speech Synthesis supported 🎉
+        var msg = new SpeechSynthesisUtterance();
+        msg.text = document.getElementById("out").innerHTML;
+        window.speechSynthesis.speak(msg);
+        }else{
+          // Speech Synthesis Not Supported 😣
+          alert("Sorry, your browser doesn't support text to speech!");
+        }
+        
+      }
+      </script>
       <script>
       function myFunction() {
         var string = document.getElementById("input").value;
@@ -15,10 +30,15 @@
         var answer = "";
         var temp = "";
         for (var i = 0; i < words.length; i += 1) {
-            temp = words[i].slice(1)
-            answer = answer + (temp+words[i][0]+"ay") + " "
+            temp = words[i].slice(1);
+            if(typeof temp === 'undefined' || typeof words[i][0] === 'undefined') {
+              document.getElementById("out").innerHTML = "<span style='color: red;'> Don't use puncuation or spaces at the end </span>";
+              break;
+            } else {
+              answer = answer + (temp.toLowerCase()+words[i][0].toLowerCase()+"ay") + " ";
+            }
+            document.getElementById("out").innerHTML = answer;
         }
-        document.getElementById("out").innerHTML = answer;
       }
       </script>
     </div>
@@ -39,22 +59,25 @@
       </div>
       <div class="col-lg-5">
         <h2 class="h4">Pig Latin Output</h2>
-        <span id="out"></span>
+        <span id="out" placeholder="iay ovelay igpay atin lay"></span>
       </div>
     </div>
   </div>
 </section>
 {{ end }}
 
+
+
 {{ define "sidebar-footer" }}
 <section class="section section-sm container-fluid">
   <div class="row justify-content-center text-center">
     <div class="col-lg-9">
+      <p class="meta">Listen to the <a href="https://www.iheart.com/podcast/105-stuff-you-should-know-26940277/">SYSK</a> episode that inspired the app.</p> 
+      <iframe src="https://open.spotify.com/embed-podcast/episode/1Lvn2Wuck6kC6x1cQu68fE" width="75%" height="75%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       {{- .Content -}}
-            <p class="meta">Open-source MIT Licensed. <a href="https://github.com/tcbutler320/piglatin.app">GitHub v{{ .Site.Data.doks.version }}</a></p> 
+      </br>
     </div>
   </div>
 </section>
 {{ end }}
-
 
