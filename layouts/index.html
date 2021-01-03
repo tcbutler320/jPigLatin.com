@@ -33,11 +33,8 @@
         var temp = "";
         for (var i = 0; i < words.length; i += 1) {
             temp = words[i].slice(1);
-            if(document.getElementById("input").value == "") {
-               document.getElementById("error").innerHTML = "<span style='color: red;'> You didn't enter a phrase!</span>";
-            }
             if(typeof temp === 'undefined' || typeof words[i][0] === 'undefined') {
-              document.getElementById("error").innerHTML = "<span style='color: red;'> Don't use spaces at the end! </span>";
+              document.getElementById("error").innerHTML = "<span style='color: red;'> <p> Enter a phrase with no spaces at the end!</p> </span>";
               break;
             } else {
               answer = answer + (temp.toLowerCase()+words[i][0].toLowerCase()+"ay") + " ";
