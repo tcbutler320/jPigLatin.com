@@ -18,7 +18,7 @@ schemaLogo = "logo-doks.png"
 schemaTwitter = "https://twitter.com/tbutler0x90"
 schemaLinkedIn = "https://www.linkedin.com/in/tyler-b-a700a1aa/"
 schemaGitHub = "https://github.com/tcbutler320"
-schemaSection = "blog"
+schemaSection = "Blog"
 
 ## Sitelinks Search Box
 siteLinksSearchBox = false
