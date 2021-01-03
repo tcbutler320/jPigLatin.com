@@ -6,7 +6,8 @@
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
       <p class="lead">{{ .Params.Lead | safeHTML }}</p>
-      <button class="btn btn-primary btn-lg px-4 mb-2" onclick="myFunction()">Translate</button>
+
+      <button class="btn btn-primary btn-lg px-4 mb-2" onclick="myFunction()">Translate!</button>
       <script>
       function myFunction() {
         var string = document.getElementById("input").value;
@@ -20,7 +21,6 @@
         document.getElementById("out").innerHTML = answer;
       }
       </script>
-      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/h-enk/doks">GitHub v{{ .Site.Data.doks.version }}</a></p> 
     </div>
   </div>
 {{ end }}
@@ -51,6 +51,7 @@
   <div class="row justify-content-center text-center">
     <div class="col-lg-9">
       {{- .Content -}}
+            <p class="meta">Open-source MIT Licensed. <a href="https://github.com/tcbutler320/piglatin.app">GitHub v{{ .Site.Data.doks.version }}</a></p> 
     </div>
   </div>
 </section>

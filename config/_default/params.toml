@@ -1,25 +1,23 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "piglatin.app"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "A simple translation app"
+description = "Piglatin.app is a simple application that translates plain text to pig-latin"
 
 ## Open Graph + Twitter Cards
 images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
+twitterSite = "tbutler0x90"
+twitterCreator = "tbutler0x90"
 ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
 schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+schemaTwitter = "https://twitter.com/tbutler0x90"
+schemaLinkedIn = "https://www.linkedin.com/in/tyler-b-a700a1aa/"
+schemaGitHub = "https://github.com/tcbutler320"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -40,8 +38,8 @@ footer = "Created by Tyler Butler | Powered by <a href=\"https://www.netlify.com
 
 # Alert
 alert = false
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertText = "Like Piglatin.app? <a class=\"alert-link\" href=\"https://github.com/tcbutler320/piglatin.app\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/tcbutler320/piglatin.app"
 editPage = false
