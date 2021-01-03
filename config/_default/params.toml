@@ -34,7 +34,7 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Created by Tyler Butler | Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+footer = "Created by <a href=\"https://www.tbutler.org/\">Tyler Butler</a> <a href=\"https://www.github.com/tcbutler320/\"><i class=\"ri-github-fill\"></i></a> <a href=\"https://www.linkedin.com/in/tyler-b-a700a1aa//\"><i class=\"ri-linkedin-box-fill\"></i></a> <a href=\"https://twitter.com/tbutler0x90\"><i class=\"ri-twitter-fill\"></i></a>| <span class=\"pull-right\">Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a></span>"
 
 # Alert
 alert = false
