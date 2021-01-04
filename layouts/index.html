@@ -5,8 +5,8 @@
       <h1 class="mt-0 typewriter" style="font-family:Courgette" id="title"></h1>
     </div>
     <div class="col-lg-9 col-xl-8 text-center">
-      <p class="lead animate__animated animate__fadeIn animate__slower">{{ .Params.Lead | safeHTML }}</p>
-      <button class="btn btn-primary mb-2 animate__animated animate__slower animate__fadeIn " onclick="myFunction()">Translate <i class="ri-translate"></i>
+      <p class="lead animate__animated animate__fadeIn animate__slower"><i>{{ .Params.Lead | safeHTML }}</i></p>
+      <button class="btn btn-primary mb-2 animate__animated animate__slower animate__fadeIn " onclick="displayPigLatin()">Translate <i class="ri-translate"></i>
       </button>
       <button class="btn btn-primary mb-2 animate__animated animate__slower animate__fadeIn" onclick="talkToMe()">Speak <i class="ri-volume-up-line"></i>
       </button>
@@ -14,34 +14,22 @@
       <script>
       function talkToMe() {
         if ('speechSynthesis' in window) {
-        // Speech Synthesis supported 🎉
         var msg = new SpeechSynthesisUtterance();
-        msg.text = document.getElementById("out").innerHTML;
+        msg.text = document.getElementById("output").innerHTML;
         window.speechSynthesis.speak(msg);
         }else{
-          // Speech Synthesis Not Supported 😣
-          document.getElementById("error").innerHTML = "Sorry, your browser doesn't support text to speech!";
+          alert("Sorry, your browser doesn't support text to speech!");
         }
         
       }
       </script>
+
       <script>
-      function myFunction() {
-        var string = document.getElementById("input").value;
-        var words = string.split(" ");
-        var answer = "";
-        var temp = "";
-        for (var i = 0; i < words.length; i += 1) {
-            temp = words[i].slice(1);
-            if(typeof temp === 'undefined' || typeof words[i][0] === 'undefined') {
-              document.getElementById("error").innerHTML = "<span style='color: red;'> <p> Enter a phrase with no spaces at the end!</p> </span>";
-              break;
-            } else {
-              answer = answer + (temp.toLowerCase()+words[i][0].toLowerCase()+"ay") + " ";
-            }
-            document.getElementById("out").innerHTML = answer;
+      function displayPigLatin(){
+        var input = "input";
+        var output = "output";
+        document.getElementById(output).innerHTML = encode(input,output);
         }
-      }
       </script>
     </div>
   </div>
@@ -63,7 +51,7 @@
         <form>
           <div class="form-group">
             <label for="exampleFormControlTextarea1"><h2 class="h4">Pig Latin</h2></label>
-            <textarea class="form-control" id="out" rows="3"  placeholder="iay ovelay igpay atin lay ..."></textarea>
+            <textarea class="form-control" id="output" rows="3"  placeholder="iay ovelay igpay atin lay ..."></textarea>
           </div>
         </form>
       </div>
@@ -92,7 +80,7 @@ function show(button, elem) {
 </script>
 <script>
 var i = 0;
-var txt = 'The JavaScript Pig-Latin Generator 🐷'; /* The text */
+var txt = 'JavaScript Pig-Latin Generator 🐷'; /* The text */
 var speed = 100; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {

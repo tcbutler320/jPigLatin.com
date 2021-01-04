@@ -3,8 +3,8 @@
 ## Homepage
 title = "JPigLatin"
 titleSeparator = "-"
-titleAddition = "A Simple JavaScript Translation and Speech Synthesis Application"
-description = "JPigLatin is a Simple JavaScript Translation and Speech Synthesis Application"
+titleAddition = "A translation and speech synthesis application powered by the jPigLatin npm package"
+description = "JPigLatin is a translation and speech synthesis application powered by the jPigLatin npm package"
 
 ## Open Graph + Twitter Cards
 images = ["doks.png"]
