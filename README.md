@@ -1,4 +1,5 @@
-# JPigLatin a Javascript Pig-Latin Generator 🐷   
+# JPigLatin.com a Javascript Pig-Latin Generator 🐷   i
+
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7cf029d4-056e-404d-a2e9-1fbdce6aaf26/deploy-status)](https://app.netlify.com/sites/sleepy-poitras-87fbed/deploys)  
 
