@@ -7,4 +7,6 @@
   Feature-Policy: geolocation 'self'
   Cache-Control: public, max-age=31536000
   Secret-Code: ZmxhZ3tXaFknZF9Zb1VfbDAwMDBrX0hlZXJlPz8K
-  Content-Security-Policy: frame-src https://*spotify.com/ https://open.spotify.com/;child-src https://*spotify.com/ https://open.spotify.com
+  Content-Security-Policy: frame-src https://*spotify.com/ https://open.spotify.com/ https://*codepen.io/ ;child-src https://*spotify.com/ https://open.spotify.com https://*codepen.io/
+
+

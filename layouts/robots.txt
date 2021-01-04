@@ -1,2 +1,8 @@
 User-agent: *
-Disallow: /flag.txt
+{{ if eq (hugo.Environment) "production" -}}
+Allow: /
+{{ else -}}
+Disallow: /secret-production-token
+Disallow: /ZmxhZ3tZT2lfYVJlX2FfV3l6QXJkX0hAcnJpfQo=
+{{ end }}
+Sitemap: {{ "sitemap.xml" | absURL -}}
